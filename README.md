@@ -5,4 +5,5 @@ This is just a simple markdown editor that can be collaboratively edited by mult
 ##To do##
 
  - add a simple cms for embedding files
+   - images, video, audio, youtube, other
  - add a simple toolbar?
