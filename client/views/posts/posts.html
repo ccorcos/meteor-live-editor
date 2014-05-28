@@ -1,0 +1,10 @@
+<template name="posts">
+    <div class="col-md-12">
+        <ul class="list-group readWidth">
+            <li class="list-group-item toolbar text-center"><span class="glyphicon glyphicon-plus new post"></span></li>
+            {{#each posts}}
+                <li class="list-group-item" id="{{_id}}"><a href="{{pathFor 'editor' _id=_id}}">{{markdownTitle text}}</a><span class="glyphicon glyphicon-minus pull-right delete post"></span></li>
+            {{/each}}
+        </ul>
+    </div>
+</template>

@@ -12,3 +12,8 @@ UI.registerHelper('keyValue', function(context, options) {
     })
     return result;
 });
+
+UI.registerHelper('markdownTitle', function(text) {
+    title = text.split('\n')[0].replace(/#/g, '')
+    return title ? title : "Untitled"
+});
