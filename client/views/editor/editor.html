@@ -1,10 +1,53 @@
 <template name="editor">
     <div class="col-md-6">
-        <h3>Editor</h3>
+        <ul class="list-inline">
+            <li><h3>Editor</h3> </li>
+            <li>{{> editorToolbar}}</li>
+        </ul>
         <textarea id="liveEditor" class="full-height">{{text}}</textarea>
     </div>
     <div class="col-md-6">
         <h3>Markdown</h3>
         <div id="liveRender">{{#markdown}}{{text}}{{/markdown}}</div>
     </div>
+</template>
+
+<template name="editorToolbar">
+    <div class="btn-toolbar editor toolbar" role="toolbar">
+        <div class="btn-group">
+            <button type="button" class="btn btn-default insert file"  data-toggle="modal" data-target="#insertFile" title="insert a file">
+                <span class="glyphicon glyphicon-folder-open"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="insertFile">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                {{> selectFile}}
+            </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+
+<template name="selectFile">
+    {{#each uploads}}
+        <div class="row select file" id="{{_id}}">
+            <div class="col-xs-12">
+                <h3>{{this.name}}</h3>
+                <p>{{dateFromUTC this.metadata.date}}</p>
+                <div>
+                    {{> media}}
+                </div>
+                <hr>
+            </div>
+        </div>
+    {{/each}}
 </template>

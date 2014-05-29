@@ -1,0 +1,26 @@
+// wrapSelected = function(textarea, wrapper) {
+//     text = textarea.val()
+//     range = textarea.textrange('get')
+//     textBefore = text.substring(0, range.start),
+//     textMiddle = text.substring(range.start, range.end)
+//     textAfter = text.substring(range.end, text.length);
+//     textarea.val(textBefore + wrapper + textMiddle + wrapper + textAfter);
+// }
+
+
+    // 'click .header1': function(event, template) {
+    //     editor = $('#liveEditor')
+    //     wrapSelected(editor, '#')
+    //     updateEditor(this._id, editor)
+
+    // },
+    // 'click .header2': function(event, template) {
+    //     editor = $('#liveEditor')
+    //     wrapSelected(editor, '##')
+    //     updateEditor(this._id, editor)
+    // },
+    // 'click .header3': function(event, template) {
+    //     editor = $('#liveEditor')
+    //     wrapSelected(editor, '###')
+    //     updateEditor(this._id, editor)
+    // }
