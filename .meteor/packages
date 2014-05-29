@@ -15,6 +15,6 @@ accounts-password
 showdown
 collectionFS
 cfs-ui
-cfs-filesystem
 ui-dropped-event
 http
+cfs-gridfs
